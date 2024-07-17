@@ -5,7 +5,7 @@ and other functionality I want a template for.
 
 ## Technologies
 Bootstrapped with create-next-app, and sst init
-- [SST](https://sst.dev/)
+- [SST Ion](https://ion.sst.dev/)
 - [Next.js](https://nextjs.org)
 - [NextAuth.js](https://next-auth.js.org)
 - [Kysely](https://kysely.dev/)
