@@ -10,11 +10,10 @@ Bootstrapped with create-next-app, and sst init
 - [NextAuth.js](https://next-auth.js.org)
 - [Kysely](https://kysely.dev/)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Bun](https://bun.sh/)
 
 ## Getting Started
 - Using node version 20.14.0
-- @TODO: Install bun or change bun to npm
+- lockfile is in bun since im using that for installs; use bun or change bun to npm
 - @TODO: in frontend dir run `npm run db:push` to migrate db
-- @TODO: in main dir run `npm run dev` to have sst deploy stack on aws for development
-- @TODO: in frontend dir run `npm run dev` to have sst bind to the Next.js app and start it
+- @TODO?: in main dir run `npm run dev` to have sst deploy stack on aws for development
+- in main dir run `npm run dev` to have sst bind to the Next.js app and start it
