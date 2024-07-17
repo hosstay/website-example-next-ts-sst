@@ -1,0 +1,13 @@
+{
+  "name": "@website-example-next-ts-sst/scripts",
+  "version": "0.0.0",
+  "dependencies": {
+    "@website-example-next-ts-sst/core": "*"
+  },
+  "scripts": {
+    "shell": "sst shell tsx"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.2"
+  }
+}

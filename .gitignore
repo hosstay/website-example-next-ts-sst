@@ -34,7 +34,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+packages/frontend/next-env.d.ts
 
 # webstorm
 .idea
@@ -44,4 +44,3 @@ next-env.d.ts
 
 # open-next
 .open-next
-.env

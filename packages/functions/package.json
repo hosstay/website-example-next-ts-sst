@@ -1,0 +1,10 @@
+{
+  "name": "@website-example-next-ts-sst/functions",
+  "version": "0.0.0",
+  "dependencies": {
+    "@website-example-next-ts-sst/core": "*"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.137"
+  }
+}

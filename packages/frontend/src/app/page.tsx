@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Example } from "@website-example-next-ts-sst/core/example";
+
+Example.hello();
 
 export default function Home() {
   return (
