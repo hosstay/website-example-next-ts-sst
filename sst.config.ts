@@ -119,7 +119,6 @@ export default $config({
 
     return {
       api: infra.api.url,
-      // trpcApi: infra.trpc.url,
       frontend: infra.site.url,
     };
   },
