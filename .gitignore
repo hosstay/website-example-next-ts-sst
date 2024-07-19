@@ -1,0 +1,14 @@
+node_modules
+
+# sst
+.sst
+
+# temporary files
+.#*
+
+# IDE
+.idea
+
+# local env files
+.env
+.env*.local

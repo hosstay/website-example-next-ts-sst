@@ -1,0 +1,12 @@
+{
+  "name": "@website-example-next-ts-sst/functions",
+  "version": "0.0.0",
+  "dependencies": {
+    "@trpc/server": "^11.0.0-rc.466",
+    "@website-example-next-ts-sst/core": "*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.137"
+  }
+}
