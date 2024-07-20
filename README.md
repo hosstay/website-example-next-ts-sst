@@ -8,7 +8,7 @@ Bootstrapped with [sst ion aws monorepo example](https://github.com/sst/ion/tree
 for the initial sst setup and structure, and [create-t3-app](https://create.t3.gg/) for the frontend.
 And then heavy modifications to make it the way I wanted it.
 
-Specifically, having SST creating/utilizing a database which could be accessed by both other SST infrastructure 
+Specifically, having SST creating/utilizing a DB w/ ORM which could be accessed by both other SST infrastructure 
 like an API and the next.js app.
 
 - [SST Ion](https://ion.sst.dev/)
