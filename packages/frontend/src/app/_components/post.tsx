@@ -5,6 +5,7 @@ import { useState } from "react";
 import { api } from "website-example-next-ts-sst/trpc/react";
 
 export function LatestPost() {
+  console.log(`Logging from "client" in "frontend" package`);
   const [latestPost] = api.post.getLatest.useSuspenseQuery();
 
   const utils = api.useUtils();

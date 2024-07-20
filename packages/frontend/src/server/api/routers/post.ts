@@ -5,6 +5,9 @@ import {
   protectedProcedure,
   publicProcedure,
 } from "website-example-next-ts-sst/server/api/trpc";
+import { post } from "../../../../../data/schema.sql";
+import { desc, eq } from "drizzle-orm";
+import { takeUniqueOrThrow } from "../../../../../data/util";
 
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
@@ -21,19 +24,16 @@ export const postRouter = createTRPCRouter({
       // simulate a slow db call
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      return ctx.db.post.create({
-        data: {
-          name: input.name,
-          createdBy: { connect: { id: ctx.session.user.id } },
-        },
-      });
+      return ctx.db.insert(post).values({ name: input.name, createdById: ctx.session.user.id });
     }),
 
   getLatest: protectedProcedure.query(({ ctx }) => {
-    return ctx.db.post.findFirst({
-      orderBy: { createdAt: "desc" },
-      where: { createdBy: { id: ctx.session.user.id } },
-    });
+    console.log(`Logging from "server" trpc lambda from "frontend" package`);
+    return ctx.db.select()
+      .from(post)
+      .where(eq(post.createdById, ctx.session.user.id))
+      .orderBy(desc(post.createdAt))
+      .then(takeUniqueOrThrow);
   }),
 
   getSecretMessage: protectedProcedure.query(() => {

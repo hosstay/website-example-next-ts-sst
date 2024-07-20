@@ -12,7 +12,7 @@ import superjson from "superjson";
 import { ZodError } from "zod";
 
 import { getServerAuthSession } from "website-example-next-ts-sst/server/auth";
-import { db } from "website-example-next-ts-sst/server/db";
+import { db } from "../../../../data/db";
 
 /**
  * 1. CONTEXT

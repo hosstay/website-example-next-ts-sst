@@ -1,10 +1,2 @@
-export const database = new sst.aws.Dynamo("Database", {
-  fields: {
-    PK: "string",
-    SK: "string",
-  },
-  primaryIndex: {
-    hashKey: "PK",
-    rangeKey: "SK",
-  },
-});
+const vpc = new sst.aws.Vpc("MyVpc");
+export const rds = new sst.aws.Postgres("MyPostgres", { vpc });

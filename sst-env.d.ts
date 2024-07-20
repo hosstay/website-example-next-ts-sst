@@ -12,6 +12,12 @@ declare module "sst" {
       type: "sst.aws.Nextjs"
       url: string
     }
+    MyPostgres: {
+      clusterArn: string
+      database: string
+      secretArn: string
+      type: "sst.aws.Postgres"
+    }
   }
 }
 export {}

@@ -1,4 +1,4 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import {
   getServerSession,
   type DefaultSession,
@@ -8,7 +8,8 @@ import { type Adapter } from "next-auth/adapters";
 import GoogleProvider from "next-auth/providers/google";
 
 import { env } from "website-example-next-ts-sst/env";
-import { db } from "website-example-next-ts-sst/server/db";
+import { db } from "../../../data/db";
+import { user, account, session, verificationToken } from "../../../data/schema.sql";
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -46,7 +47,14 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   },
-  adapter: PrismaAdapter(db) as Adapter,
+  adapter: DrizzleAdapter(db, {
+    // @ts-ignore
+    usersTable: user,
+    accountsTable: account,
+    sessionsTable: session,
+    // @ts-ignore
+    verificationTokensTable: verificationToken
+  }) as Adapter,
   providers: [
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,

@@ -118,8 +118,11 @@ export default $config({
     const infra = await import("./infra");
 
     return {
-      api: infra.api.url,
-      frontend: infra.site.url,
+      clusterArn: infra.rds.clusterArn,
+      database: infra.rds.database,
+      secretArn: infra.rds.secretArn,
+      Api: infra.api.url,
+      Frontend: infra.site.url,
     };
   },
 });
