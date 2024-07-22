@@ -27,3 +27,4 @@ like an API and the next.js app.
 - the output of the run command will give you your local url for the app
 - the api url is obviously for interacting with the api manually (like browser or postman)
 - the secretArn/database it gives can be used to log into the query editor in the aws console if needed.
+- in ./ run `npm run db:studio` to interact with the db in drizzle's nice ui.
