@@ -20,11 +20,11 @@ like an API and the next.js app.
 
 ## Getting Started
 - Using node version 20.14.0
-- in ./ run `npm run db generate` to generate drizzle migration
-- in ./ run `npm run db migrate` to migrate db
-- in ./packages/frontend run `npm run dev` to start app.
+- run `npm run db generate` to generate drizzle migration
+- run `npm run db migrate` to migrate db
+- run `npm run dev` to start app.
 
 - the output of the run command will give you your local url for the app
 - the api url is obviously for interacting with the api manually (like browser or postman)
 - the secretArn/database it gives can be used to log into the query editor in the aws console if needed.
-- in ./ run `npm run db:studio` to interact with the db in drizzle's nice ui.
+- run `npm run db:studio` to interact with the db in drizzle's nice ui.

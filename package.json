@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "sst dev",
+    "dev": "npm --prefix packages/frontend run dev",
+    "dev:backend": "sst dev",
     "db": "sst shell drizzle-kit",
     "db:studio": "sst shell drizzle-kit studio"
   },
