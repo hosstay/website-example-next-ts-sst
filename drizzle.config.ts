@@ -1,15 +1,21 @@
-import { Resource } from "sst";
+import { config } from 'dotenv';
 import { defineConfig } from "drizzle-kit";
 
+config({ path: '.env' });
+
+const dbUrl = process.env.DATABASE_URL;
+
+if (!dbUrl) {
+  throw new Error("DATABASE_URL is missing");
+}
+
+// console.log(`drizzle.config.ts: Database URL: ${dbUrl}`);
+
 export default defineConfig({
-  driver: "aws-data-api",
   dialect: "postgresql",
   dbCredentials: {
-    database: Resource.MyPostgres.database,
-    secretArn: Resource.MyPostgres.secretArn,
-    resourceArn: Resource.MyPostgres.clusterArn,
+    url: process.env.DATABASE_URL,
   },
-  // Pick up all our schema files
   schema: ["./packages/data/*.sql.ts"],
   out: "./packages/data/migrations",
 });

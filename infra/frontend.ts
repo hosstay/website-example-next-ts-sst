@@ -1,6 +1,6 @@
-import { rds } from "./database";
+// import { rds } from "./database";
 
 export const site = new sst.aws.Nextjs("Frontend", {
-  link: [rds],
+  // link: [rds],
   path: "packages/frontend",
 });

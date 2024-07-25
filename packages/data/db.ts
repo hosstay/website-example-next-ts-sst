@@ -1,11 +1,16 @@
-import { Resource } from "sst";
-import { drizzle } from "drizzle-orm/aws-data-api/pg";
-import { RDSDataClient } from "@aws-sdk/client-rds-data";
+import { config } from 'dotenv';
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
 
-const client = new RDSDataClient({});
+config({ path: '.env' });
 
-export const db = drizzle(client, {
-  database: Resource.MyPostgres.database,
-  secretArn: Resource.MyPostgres.secretArn,
-  resourceArn: Resource.MyPostgres.clusterArn,
-});
+const dbUrl = process.env.DATABASE_URL;
+
+if (!dbUrl) {
+  throw new Error("DATABASE_URL is missing");
+}
+
+// console.log(`db.ts: Database URL: ${dbUrl}`);
+
+const client = postgres(dbUrl);
+export const db = drizzle(client);

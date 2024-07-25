@@ -118,9 +118,9 @@ export default $config({
     const infra = await import("./infra");
 
     return {
-      clusterArn: infra.rds.clusterArn,
-      database: infra.rds.database,
-      secretArn: infra.rds.secretArn,
+      // clusterArn: infra.rds.clusterArn,
+      // database: infra.rds.database,
+      // secretArn: infra.rds.secretArn,
       Api: infra.api.url,
       Frontend: infra.site.url,
     };
