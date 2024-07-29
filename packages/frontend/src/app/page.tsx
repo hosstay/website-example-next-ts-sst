@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#ffffff] to-[#adadad] dark:bg-gradient-to-b dark:from-[#000000] dark:to-[#2b2b2b]">
+    <main className="flex min-h-screen flex-col items-center justify-center tracking-tight bg-gradient-to-b from-[#ffffff] to-[#adadad] dark:bg-gradient-to-b dark:from-[#000000] dark:to-[#2b2b2b]">
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-gray-1000 dark:text-gray-400 sm:text-[5rem]">
+        <h1 className="text-5xl font-extrabold text-center text-gray-1000 dark:text-gray-400 sm:text-[5rem] ">
           Responsive Example App
         </h1>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
