@@ -5,7 +5,7 @@ import { type Metadata } from "next";
 
 import { ReactThemeProvider } from "../theme/react"
 
-import { Header } from "website-example-next-ts-sst/app/_components/Header";
+import { Header } from "./_components/Header";
 
 export const metadata: Metadata = {
   title: "Responsive Example App",
