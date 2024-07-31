@@ -6,6 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "sst dev next dev",
+    "next-video": "cross-env SKIP_ENV_VALIDATION=true npx next-video sync -w",
     "lint": "next lint",
     "start": "next start"
   },
@@ -33,8 +34,10 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.4",
+    "next-video": "^1.1.1",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",

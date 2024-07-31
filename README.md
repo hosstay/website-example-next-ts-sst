@@ -17,6 +17,7 @@ like an API and the next.js app.
 - [tRPC](https://trpc.io)
 - [NextAuth.js](https://next-auth.js.org)
 - [Tailwind CSS](https://tailwindcss.com)
+- [next-video](https://next-video.dev/)
 
 ## Getting Started
 - Using node version 20.14.0
@@ -28,3 +29,14 @@ like an API and the next.js app.
 - the api url is obviously for interacting with the api manually (like browser or postman)
 - the secretArn/database it gives can be used to log into the query editor in the aws console if needed.
 - run `npm run db:studio` to interact with the db in drizzle's nice ui.
+
+## next-video assets
+- for this I used integration with MUX, hence the environment variables
+- to add new video assets:
+  - put the video file in frontend/videos 
+  - when you run `npm run next-video` it will automatically look for changes in the video folder and process it using MUX outputting a .json file in the same folder.
+  - see the get-started/getStarted import and usage for example.
+- only the json files are added to git which allow the client to access the mux videos. 
+
+## Notes
+- Frontend will throw hydration warnings because of the next-video player if you have web extensions that would alter it like "Video Speed Controller" I use on Chrome. 

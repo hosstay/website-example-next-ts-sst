@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "dev": "npm --prefix packages/frontend run dev",
+    "next-video": "npm --prefix packages/frontend run next-video",
     "dev:backend": "sst dev",
     "db": "sst shell drizzle-kit",
     "db:studio": "sst shell drizzle-kit studio"

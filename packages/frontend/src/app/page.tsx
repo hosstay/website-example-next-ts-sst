@@ -1,7 +1,9 @@
 import { TextCard } from "./_components/Cards/TextCard";
 import { LinkCard } from "./_components/Cards/LinkCard";
+import { VideoCard } from "./_components/Cards/VideoCard";
 import { ImageCard } from "./_components/Cards/ImageCard";
 
+import getStarted from "/videos/get-started.mp4?thumbnailTime=0";
 
 export default async function Home() {
   return (
@@ -11,6 +13,11 @@ export default async function Home() {
           Responsive Example App
         </h1>
         <div className="w-full grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-2 xl:grid-cols-3">
+          <VideoCard
+            src={getStarted}
+            title="Video Card"
+            description="A video card component that can be used to display a video and some description."
+          />
           <ImageCard
             src="/images/keanu-reeves.png"
             width={1280}
